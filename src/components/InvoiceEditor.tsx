@@ -157,7 +157,7 @@ export function InvoiceEditor({ data, onChange }: InvoiceEditorProps) {
               <div className="col-span-4 sm:col-span-2">
                 <input
                   type="number"
-                  value={item.quantity}
+                  value={item.quantity || ''}
                   onChange={(e) =>
                     updateItem(item.id, 'quantity', Number(e.target.value))
                   }
@@ -169,7 +169,7 @@ export function InvoiceEditor({ data, onChange }: InvoiceEditorProps) {
               <div className="col-span-6 sm:col-span-4">
                 <input
                   type="number"
-                  value={item.unitPrice}
+                  value={item.unitPrice || ''}
                   onChange={(e) =>
                     updateItem(item.id, 'unitPrice', Number(e.target.value))
                   }
@@ -241,7 +241,7 @@ export function InvoiceEditor({ data, onChange }: InvoiceEditorProps) {
             </div>
             <input
               type="number"
-              value={data.discount}
+              value={data.discount || ''}
               onChange={(e) => updateField('discount', Number(e.target.value))}
               className="w-full p-2 border border-slate-300 rounded-md"
               min="0"
@@ -256,7 +256,7 @@ export function InvoiceEditor({ data, onChange }: InvoiceEditorProps) {
             </label>
             <input
               type="number"
-              value={data.deliveryFee}
+              value={data.deliveryFee || ''}
               onChange={(e) =>
                 updateField('deliveryFee', Number(e.target.value))
               }

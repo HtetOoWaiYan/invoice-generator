@@ -24,14 +24,15 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(
     return (
       <div
         ref={ref}
-        className="bg-white p-6 sm:p-8 w-full mx-auto shadow-lg min-h-[520px] text-slate-800"
+        className="bg-white p-8 w-[820px] mx-auto shadow-lg min-h-[520px] text-slate-800"
+        style={{ width: 820 }}
       >
         {/* Header Section */}
         <div className="mb-8">
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+          <div className="flex flex-row justify-between items-start gap-2">
             <div>
               <h1
-                className="text-2xl sm:text-3xl font-semibold mb-0"
+                className="text-3xl font-semibold mb-0"
                 style={{ color: business.themeColor || '#1f2937' }}
               >
                 {business.name}
@@ -47,9 +48,7 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(
             </div>
 
             <div className="text-right">
-              <div className="text-3xl sm:text-4xl font-bold text-slate-800">
-                Invoice
-              </div>
+              <div className="text-4xl font-bold text-slate-800">Invoice</div>
               <div className="text-sm text-slate-500 mt-1">
                 Submitted on {data.date.toLocaleDateString()}
               </div>
@@ -133,8 +132,8 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(
 
         {/* Footer Section */}
         <div className="bg-slate-50 p-4 rounded-lg mt-auto">
-          <div className="flex flex-col sm:flex-row justify-between gap-4">
-            <div className="w-full sm:w-1/2">
+          <div className="flex flex-row justify-between gap-4">
+            <div className="w-1/2">
               {data.notes && (
                 <div className="mb-4">
                   <span className="text-slate-400 font-medium mr-2">
@@ -149,7 +148,7 @@ export const InvoicePreview = forwardRef<HTMLDivElement, InvoicePreviewProps>(
               )}
             </div>
 
-            <div className="w-full sm:w-1/2 pl-0 sm:pl-8">
+            <div className="w-1/2 pl-8">
               <div className="flex justify-between mb-2">
                 <span className="text-slate-700">Subtotal</span>
                 <span className="font-bold">{formatCurrency(subtotal)}</span>

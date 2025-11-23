@@ -53,7 +53,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-100 p-4 md:p-8">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1600px] mx-auto">
         <header className="flex justify-between items-center mb-8">
           <h1 className="text-2xl font-bold text-slate-800">
             Invoice Generator
@@ -67,12 +67,12 @@ function App() {
           </button>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="order-2 lg:order-1">
+        <div className="grid grid-cols-1 xl:grid-cols-[1fr_auto] gap-8">
+          <div className="order-1">
             <InvoiceEditor data={data} onChange={setData} />
           </div>
 
-          <div className="order-1 lg:order-2">
+          <div className="order-2 fixed left-[-9999px] lg:static lg:left-auto">
             <div className="sticky top-8 overflow-auto max-h-[calc(100vh-8rem)] rounded-lg shadow-lg">
               <InvoicePreview
                 ref={previewRef}

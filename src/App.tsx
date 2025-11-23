@@ -41,6 +41,11 @@ function App() {
       const dataUrl = await toPng(previewRef.current, {
         cacheBust: true,
         pixelRatio: 2,
+        width: 820,
+        style: {
+          width: '820px',
+          height: 'auto',
+        },
       });
       const link = document.createElement('a');
       link.download = `invoice-${data.id}.png`;

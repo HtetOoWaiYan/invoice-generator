@@ -77,7 +77,7 @@ function App() {
             <InvoiceEditor data={data} onChange={setData} />
           </div>
 
-          <div className="order-2 fixed left-[-9999px] lg:static lg:left-auto">
+          <div className="order-2">
             <div className="sticky top-8 overflow-auto max-h-[calc(100vh-8rem)] rounded-lg shadow-lg">
               <InvoicePreview
                 ref={previewRef}
